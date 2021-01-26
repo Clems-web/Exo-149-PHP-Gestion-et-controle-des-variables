@@ -7,7 +7,12 @@
  */
 $var = 0;
 // TODO votre code ici.
-
+if (empty($var)) {
+    echo "Ouais ouais c'est vide";
+}
+elseif (!empty($var)) {
+    echo "Nan nan c'est pas vide";
+}
 
 
 
@@ -16,20 +21,22 @@ $var = 0;
  */
 $eraseMe = "Please erase me !";
 // TODO votre code ici.
-
+unset($eraseMe);
+print_r($eraseMe);
 
 /**
  * 3. Déclarez vous même un tableau et utilisez var_dump pour afficher toutes les informations de debug.
  */
 // TODO votre code ici.
-
+$tab = ["pierre", "paul", "jacques"];
+var_dump($tab);
 echo "<br>";
 
 /**
  * 4. Faites la même chose avec le même tableau, mais pour la méthode print_r.
  */
 // TODO votre code ici.
-
+print_r($tab);
 echo "<br>";
 
 
