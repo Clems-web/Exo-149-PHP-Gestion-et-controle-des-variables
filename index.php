@@ -28,15 +28,15 @@ print_r($eraseMe);
  * 3. Déclarez vous même un tableau et utilisez var_dump pour afficher toutes les informations de debug.
  */
 // TODO votre code ici.
-$tab = ["pierre", "paul", "jacques"];
-var_dump($tab);
+$tab1 = ["pierre", "paul", "jacques"];
+var_dump($tab1);
 echo "<br>";
 
 /**
  * 4. Faites la même chose avec le même tableau, mais pour la méthode print_r.
  */
 // TODO votre code ici.
-print_r($tab);
+print_r($tab1);
 echo "<br>";
 
 
@@ -46,7 +46,12 @@ echo "<br>";
  */
 $tab = ["test" => true, "name" => "Doe", "age" => 32];
 // TODO Votre code ici.
-
+if(isset($tab["doNotExists"])) {
+    echo "Résiste ! Prouve que tu exiiiistes !";
+}
+else {
+    echo "Nan nan rien à faire elle n'y est pas <br>";
+}
 
 /**
  * 6. Créez une variable contenant:
@@ -70,3 +75,34 @@ $tab = ["test" => true, "name" => "Doe", "age" => 32];
  */
 
 // TODO votre code ici.
+
+$maVar = true;
+$maVar2 = 56;
+$maVar3 = 2.5;
+$maVar4 = "Une chaîne de caractère";
+
+
+function test($var) {
+    $text = "Ma variabe est de type : ";
+    if (is_bool($var)) {
+        echo $text . "boolean <br>";
+    }
+    elseif (is_int($var)) {
+        echo $text . "entier <br>";
+    }
+    elseif (is_float($var)) {
+        echo $text . "flottant <br>";
+    }
+    elseif (is_string($var)) {
+        echo $text . "une chaîne de caractère <br>";
+    }
+}
+
+test($maVar);
+test($maVar2);
+test($maVar3);
+test($maVar4);
+
+test($tab);
+test($var);
+test($tab1);
